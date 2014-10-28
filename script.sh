@@ -1,3 +1,3 @@
-flex teste.l
+flex trab.l
 gcc lex.yy.c -lfl
-./a.out < input > output
+./a.out < input.in > output.saida
