@@ -23,7 +23,7 @@ SDIGIT  um | uma | dois | duas | tres | quatro | cinco | seis | sete | oito | no
 	BEGIN(searching);	
 }
 
-<searching>([Ee]"m "|[Nn]"o ")[A-Z][a-z]+  {
+<searching>([Ee]"m "|[Nn]"o ")[A-Z][a-z]+  ([A-Z][a-z]+)? ("da"?"de"?"do"?[A-Z][a-z]+)? {
 	place = malloc(yyleng);
 	place = yytext;
 	BEGIN(INITIAL);
