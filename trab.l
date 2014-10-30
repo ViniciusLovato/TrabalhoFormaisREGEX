@@ -23,7 +23,7 @@ SDIGIT  um | uma | dois | duas | tres | quatro | cinco | seis | sete | oito | no
 	BEGIN(searching);	
 }
 
-<searching>([Ee]"m "|[Nn]"o ")[A-Z][a-z]+ {
+<searching>([Ee]"m "|[Nn]"o ")[A-Z][a-z]+  {
 	place = malloc(yyleng);
 	place = yytext;
 	BEGIN(INITIAL);
@@ -33,14 +33,14 @@ SDIGIT  um | uma | dois | duas | tres | quatro | cinco | seis | sete | oito | no
 	rvalue = atoi(yytext); 
 	BEGIN(searching);	
 }
-<searching>."mortos"|"morreram" {
+<searching>."morta"[ao][s]?|"morreram" {
 	number_d += rvalue;
     BEGIN(INITIAL);	
 }
-<searching>."feridas"|"feridos" {
+<searching>."ferida"[s]?|"ferido"[s]? {
 	wounded += rvalue;
 }
-<searching>"bombas"|"misseis" {
+<searching>"bomba"[s]?|"misseis" {
 	nbombs += rvalue;
 }
 
