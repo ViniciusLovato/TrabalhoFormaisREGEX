@@ -1,14 +1,24 @@
 TrabalhoFormaisREGEX
 ====================
-
-
-
+Vinicius Alvarenga Lovato 7696455
+Paulo Henrique de Oliveira Moreno 7704943
+Ricardo Cardoso Cunha 7696330
 
 ====================
 Requerimentos:
 ====================
 - O trabalho foi desenvolvido no Linux Ubuntu
 - Para instalar o FLEX basta executar sudo apt-get install flex
+
+=======================
+ Descricao dos arquivos
+=======================
+- Arquivos de input foram chamados de input[numero].in
+- Arquivos gerados de saida foram chamados de output[numero].saida
+- O arquivo de especificacao do extrator de informacoes foi chamado de trab.l
+- O arquivo lex.yy.c foi gerado pelo flex (que teve como entrada o trab.l)
+- O arquivo executal foi gerado como a.out
+
 
 ====================
 Para Executar:
