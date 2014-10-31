@@ -379,7 +379,7 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[114] =
     {   0,
-        0,    0,    0,    0,    0,    0,    0,    0,   12,    1,
+        1,    1,    0,    0,    0,    0,    0,    0,   12,    1,
        11,    3,   11,   11,   11,   11,   11,   11,    9,   10,
         3,    0,    0,    0,    0,    0,    0,    0,    0,    9,
        10,    0,    0,    0,    0,    0,    0,    0,    0,    0,
@@ -739,7 +739,8 @@ YY_DECL
     
 #line 18 "trab.l"
 
-#line 743 "lex.yy.c"
+
+#line 744 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -824,14 +825,14 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 19 "trab.l"
+#line 20 "trab.l"
 {
 	BEGIN(searching);
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 23 "trab.l"
+#line 24 "trab.l"
 {
 	place = malloc(yyleng+1);
 	strcpy(place, yytext);
@@ -840,7 +841,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 29 "trab.l"
+#line 30 "trab.l"
 {
 	rvalue = atoi(yytext); 
 	BEGIN(searching);	
@@ -848,7 +849,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 34 "trab.l"
+#line 35 "trab.l"
 {
 	number_d += rvalue;
     BEGIN(INITIAL);	
@@ -856,35 +857,35 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 39 "trab.l"
+#line 40 "trab.l"
 {
 	BEGIN(get_number_d);
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 43 "trab.l"
+#line 44 "trab.l"
 {
 	wounded += rvalue;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 47 "trab.l"
+#line 48 "trab.l"
 {
 	BEGIN(get_number_w);
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 51 "trab.l"
+#line 52 "trab.l"
 {
 	nbombs += rvalue;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 55 "trab.l"
+#line 56 "trab.l"
 {
 	number_d += atoi(yytext);
 	BEGIN(searching);
@@ -892,7 +893,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 60 "trab.l"
+#line 61 "trab.l"
 {
 	wounded += atoi(yytext);
 	BEGIN(searching);
@@ -900,10 +901,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 65 "trab.l"
+#line 66 "trab.l"
 ECHO;
 	YY_BREAK
-#line 907 "lex.yy.c"
+#line 908 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(searching):
 case YY_STATE_EOF(get_number_d):
@@ -1904,7 +1905,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 65 "trab.l"
+#line 66 "trab.l"
 
 
 void main(){

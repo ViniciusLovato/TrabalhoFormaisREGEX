@@ -7,3 +7,4 @@ gcc lex.yy.c -lfl
 ./a.out < input5.in > output5.saida
 ./a.out < input6.in > output6.saida
 ./a.out < input7.in > output7.saida
+./a.out < input8.in > output8.saida

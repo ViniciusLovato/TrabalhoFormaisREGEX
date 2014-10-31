@@ -16,7 +16,8 @@ CIDADE ([A-Z][a-z]+(\ [A-Z][a-z]+)?(\ da\ ?\ de\ ?\ do\ ?[A-Z][a-z]+)?)
 %x searching get_number_d get_number_w
  
 %%
-. {
+
+.? {
 	BEGIN(searching);
 }
 
